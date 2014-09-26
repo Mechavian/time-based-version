@@ -1,10 +1,8 @@
-time-based-version
-==================
+# time-based-version
 
-Utility for creating a time based version number at build time
+MSBuild target for auto-generating a C# assembly version or JS file using the current date\time. 
 
-How To Use
-==========
+## How To Use
 
 Add time-based-version nuget package to your project by running the following command in the Package Manager Console:
 ```
@@ -31,10 +29,9 @@ Lastly, make sure to remove the duplicate version attributes in your AssemblyInf
 [assembly: AssemblyFileVersion("1.1.0.0")]
 ```
 
-Supported Extensions
-====================
+# Supported Extensions
 
-* .cs
+### .cs
 
 A Compile or Content item in your CSProj with a file extension of *.cs will produce a C# file that contains an AssemblyInfo class and assembly version attributes. This will look something like this:
 
@@ -52,7 +49,7 @@ namespace VersionMSBuildTest
 }
 ```
 
-* .js
+### .js
 
 A Compile or Content item in your CSProj with a file extension of *.js will produce a [RequireJS](http://requirejs.org/) type file for use in your Single Page application. This will look something like this:
 
