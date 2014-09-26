@@ -14,6 +14,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{ABE963
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{F0CFFE97-8C36-44EC-9E9C-EB947F35DA0D}"
+	ProjectSection(SolutionItems) = preProject
+		Build.proj = Build.proj
+		.build\MSBuild.Community.Tasks.dll = .build\MSBuild.Community.Tasks.dll
+		.build\MSBuild.Community.Tasks.targets = .build\MSBuild.Community.Tasks.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VersionMSBuildTest", "tests\VersionMSBuildTest\VersionMSBuildTest.csproj", "{B938D9DA-F6C3-45B9-B6EF-6882FACDD0BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +37,10 @@ Global
 		{BD2BB440-8AF8-4A07-8D46-FA3ACB0953C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD2BB440-8AF8-4A07-8D46-FA3ACB0953C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD2BB440-8AF8-4A07-8D46-FA3ACB0953C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B938D9DA-F6C3-45B9-B6EF-6882FACDD0BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B938D9DA-F6C3-45B9-B6EF-6882FACDD0BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B938D9DA-F6C3-45B9-B6EF-6882FACDD0BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B938D9DA-F6C3-45B9-B6EF-6882FACDD0BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

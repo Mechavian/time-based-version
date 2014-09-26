@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>time-based-version</id>
+        <version>$version$</version>
+        <title>Time Based Version</title>
+        <authors>Mechavian Inc.</authors>
+        <projectUrl>https://github.com/Mechavian/time-based-version</projectUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <licenseUrl>https://raw.githubusercontent.com/Mechavian/time-based-version/master/LICENSE</licenseUrl>
+        <description>MSBuild Project for auto-generating an assembly version using the current date\time at build-time.</description>
+        <copyright>Copyright 2014 Mechavian Inc</copyright>
+        <language>en-US</language>
+    </metadata>
+    <files>
+        <file src="time-based-version.targets" target="build\time-based-version.targets" />
+        <file src="$OutputPath$Version.exe" target="Version.exe" />
+        <file src="$OutputPath$Version.exe.config" target="Version.exe.config" />
+    </files>
+</package>

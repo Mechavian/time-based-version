@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Target Name="UpdateVersionInfo"
+            BeforeTargets="CoreCompile">
+        <Exec Condition="%(Compile.IsVersionInfo) != ''"
+              Command="$(MSBuildThisFileDirectory)..\Version.exe &quot;$(MSBuildProjectDirectory)\%(Compile.Identity)&quot; 1 0" />
+    </Target>
+</Project>
