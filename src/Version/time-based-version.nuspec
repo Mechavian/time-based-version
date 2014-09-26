@@ -8,9 +8,24 @@
         <projectUrl>https://github.com/Mechavian/time-based-version</projectUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <licenseUrl>https://raw.githubusercontent.com/Mechavian/time-based-version/master/LICENSE</licenseUrl>
-        <description>MSBuild Project for auto-generating an assembly version using the current date\time at build-time.</description>
+        <summary>MSBuild target for auto-generating a C# assembly version or JS file using the current date\time.</summary>
+        <description>
+            <![CDATA[
+            MSBuild target for auto-generating a C# assembly version or JS file using the
+            current date\time. After installing this package you will need to open your
+            CSProj in a text editor and add the following project item:
+
+            <Compile Include="Properties\Version.cs">
+                <IsVersionInfo>True</IsVersionInfo>
+                <Major>1</Major>
+                <Minor>0</Minor>
+                <Namespace>$(RootNamespace)</Namespace>
+            </Compile>
+            ]]>
+        </description>
         <copyright>Copyright 2014 Mechavian Inc</copyright>
         <language>en-US</language>
+        <iconUrl>https://www.mechavian.com/img/fi/favicon-32x32.png</iconUrl>
     </metadata>
     <files>
         <file src="time-based-version.targets" target="build\time-based-version.targets" />

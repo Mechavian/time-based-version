@@ -48,7 +48,7 @@
         <IsVersionInfo>True</IsVersionInfo>
         <Major>1</Major>
         <Minor>0</Minor>
-        <Namespace>VersionMSBuildTest</Namespace>
+        <Namespace>$(RootNamespace)</Namespace>
     </Compile>
     <Content Include="Properties\Version.js">
         <IsVersionInfo>True</IsVersionInfo>
