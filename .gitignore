@@ -8,7 +8,7 @@
 
 # Version File
 Version.cs
-version.json
+Version.js
 
 # Build results
 
@@ -154,12 +154,3 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
-
-# ===========================
-# Typescript Generated Files
-# ===========================
-
-/src/ma.com.web.content/js/ma/*.js
-/src/ma.com.web.content/js/ma/*.js.map
-/src/ma.com.web.content/js/ma/*/*.js
-/src/ma.com.web.content/js/ma/*/*.js.map

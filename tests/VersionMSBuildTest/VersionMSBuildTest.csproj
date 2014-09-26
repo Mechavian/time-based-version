@@ -45,8 +45,16 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Version.cs">
-      <IsVersionInfo>True</IsVersionInfo>
+        <IsVersionInfo>True</IsVersionInfo>
+        <Major>1</Major>
+        <Minor>0</Minor>
+        <Namespace>VersionMSBuildTest</Namespace>
     </Compile>
+    <Content Include="Properties\Version.js">
+        <IsVersionInfo>True</IsVersionInfo>
+        <Major>1</Major>
+        <Minor>0</Minor>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

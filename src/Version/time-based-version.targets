@@ -1,8 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Target Name="UpdateVersionInfo"
-            BeforeTargets="CoreCompile">
+
+    <Target Name="UpdateVersionInfoCompile"
+            BeforeTargets="CoreCompile"
+            Outputs="%(Compile.Identity)">
+
+        <Error Condition="%(Compile.IsVersionInfo) != '' AND %(Compile.Major) == ''"
+               Text="Missing required Major property on %(Compile.Identity)"></Error>
+        <Error Condition="%(Compile.IsVersionInfo) != '' AND %(Compile.Minor) == ''"
+               Text="Missing required Major property on %(Compile.Identity)"></Error>
         <Exec Condition="%(Compile.IsVersionInfo) != ''"
-              Command="$(MSBuildThisFileDirectory)..\Version.exe &quot;$(MSBuildProjectDirectory)\%(Compile.Identity)&quot; 1 0" />
+              Command="$(MSBuildThisFileDirectory)..\Version.exe &quot;$(MSBuildProjectDirectory)\%(Compile.Identity)&quot; %(Compile.Major) %(Compile.Minor) %(Compile.Namespace)" />
+
+    </Target>
+
+    <Target Name="UpdateVersionInfoContent"
+            BeforeTargets="CoreCompile"
+            Outputs="%(Content.Identity)">
+
+        <Error Condition="%(Content.IsVersionInfo) != '' AND %(Content.Major) == ''"
+               Text="Missing required Major property on %(Content.Identity)"></Error>
+        <Error Condition="%(Content.IsVersionInfo) != '' AND %(Content.Minor) == ''"
+               Text="Missing required Major property on %(Content.Identity)"></Error>
+        <Exec Condition="%(Content.IsVersionInfo) != ''"
+              Command="$(MSBuildThisFileDirectory)..\Version.exe &quot;$(MSBuildProjectDirectory)\%(Content.Identity)&quot; %(Content.Major) %(Content.Minor) %(Content.Namespace)" />
+
     </Target>
 </Project>
